@@ -57,6 +57,7 @@
 		<module>service</module>
 		<module>dao</module>
 		<module>model</module>
+		<module>persistence</module>
 	</modules>
 
 	<!-- 1ère manière de spécifier la version java souhaitée et que tout le 
