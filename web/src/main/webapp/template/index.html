@@ -2,72 +2,47 @@
 <html>
 <head>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<h2>Hello World!</h2>
 
-<form class="form-horizontal">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+
+<form action="/action_page.php">
   <div class="form-group">
-    <label class="col-sm-2 control-label">Focused</label>
-    <div class="col-sm-10">
-      <input class="form-control" id="focusedInput" type="text" value="Click to focus">
-    </div>
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
   </div>
   <div class="form-group">
-    <label for="disabledInput" class="col-sm-2 control-label">Disabled</label>
-    <div class="col-sm-10">
-      <input class="form-control" id="disabledInput" type="text" disabled>
-    </div>
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
   </div>
-  <fieldset disabled>
-    <div class="form-group">
-      <label for="disabledTextInput" class="col-sm-2 control-label">Fieldset disabled</label>
-      <div class="col-sm-10">
-        <input type="text" id="disabledTextInput" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="disabledSelect" class="col-sm-2 control-label"></label>
-      <div class="col-sm-10">
-        <select id="disabledSelect" class="form-control">
-          <option>Disabled select</option>
-        </select>
-      </div>
-    </div>
-  </fieldset>
-  <div class="form-group has-success has-feedback">
-    <label class="col-sm-2 control-label" for="inputSuccess">
-    Input with success and icon</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputSuccess">
-      <span class="glyphicon glyphicon-ok form-control-feedback"></span>
-    </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
   </div>
-  <div class="form-group has-warning has-feedback">
-    <label class="col-sm-2 control-label" for="inputWarning">
-    Input with warning and icon</label>  
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputWarning">
-      <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
-    </div>
-  </div>
-  <div class="form-group has-error has-feedback">
-    <label class="col-sm-2 control-label" for="inputError">
-    Input with error and icon</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputError">
-      <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-    </div>
-  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </body>
 </html>
