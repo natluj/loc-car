@@ -44,24 +44,30 @@ public class AgenceDaoImpl implements AgenceDao{
 		this.contrats = contrats;
 	}
 
-	public void addAgence(String nom) {
-//		em.is
-		
+	public Agence addAgence(Agence agence) {
+		em.getTransaction().begin();
+		em.persist(agence);
+		em.getTransaction().commit();
+		return agence;
 	}
 
 	public Agence getAgenceById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		em.getTransaction().begin();
+		Agence agence = em.find(Agence.class, id);
+		em.getTransaction().commit();
+		return agence;
 	}
 
-	public void removeAgence(int id) {
-		// TODO Auto-generated method stub
-		
+	public Agence updateAgence(Agence agence) {
+		em.getTransaction().begin();
+		agence = em.merge(agence);
+		em.getTransaction().commit();
+		return agence;
 	}
 
-	public void updateAgence(int id, String nom) {
-		// TODO Auto-generated method stub
-		
+	public void removeAgence(Agence agence) {
+		em.getTransaction().begin();
+		em.remove(agence);
 	}
 
 
